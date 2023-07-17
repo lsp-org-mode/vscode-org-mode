@@ -1,0 +1,37 @@
+{
+  "name": "vscode-org-mode",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "main": "./dist/extension.js",
+  "engines": {
+    "vscode": "^1.80.1"
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -p ./ -w"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.1.6"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "org-mode",
+        "extensions": [".org"]
+      }
+    ],
+    "commands": [
+      {
+        "command": "org-mode.hello",
+        "title": "org-mode: hello"
+      }
+    ]
+  }
+}
