@@ -1,5 +1,5 @@
 {
-  "name": "vscode-org-mode",
+  "name": "org-mode",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -24,7 +24,9 @@
     "languages": [
       {
         "id": "org-mode",
-        "extensions": [".org"]
+        "extensions": [
+          ".org"
+        ]
       }
     ],
     "commands": [
@@ -33,5 +35,8 @@
         "title": "org-mode: hello"
       }
     ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "^8.1.0"
   }
 }
