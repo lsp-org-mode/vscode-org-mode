@@ -28,7 +28,7 @@ function helloWorld() {
     vscode.window.showInformationMessage('Hello, world!')
 }
 
-export function activate(context: any) {
+export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(vscode.commands.registerCommand('org-mode.hello', helloWorld));
 }
 
