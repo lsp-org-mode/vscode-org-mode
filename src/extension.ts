@@ -28,12 +28,10 @@ function helloWorld() {
     vscode.window.showInformationMessage('Hello, world!')
 }
 
-function activate(context: any) {
+export function activate(context: any) {
     context.subscriptions.push(vscode.commands.registerCommand('org-mode.hello', helloWorld));
 }
 
-function deactivate() {
+export function deactivate() {
     return undefined;
 }
-
-module.exports = { activate, deactivate };
