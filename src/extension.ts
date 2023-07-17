@@ -1,10 +1,9 @@
 import * as vscode from 'vscode';
 
 import {
-	LanguageClient,
-	LanguageClientOptions,
-	ServerOptions,
-	TransportKind
+  Executable,
+  LanguageClient,
+  LanguageClientOptions,
 } from 'vscode-languageclient/node';
 
 let client: LanguageClient;
@@ -14,10 +13,8 @@ function helloWorld() {
 }
 
 function activateLspServer(context: vscode.ExtensionContext) {
-  const serverModule = context.asAbsolutePath('lsp-org-mode');
-  const serverOptions: ServerOptions = {
-    run: { module: serverModule, transport: TransportKind.stdio },
-    debug: { module: serverModule, transport: TransportKind.stdio },
+  const serverOptions: Executable = {
+    command: 'lsp-org-mode'
   };
   const clientOptions: LanguageClientOptions = {
     documentSelector: [{ scheme: 'file', language: 'org-mode' }],
