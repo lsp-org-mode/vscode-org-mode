@@ -1,0 +1,73 @@
+* vscode-org-mode
+
+[[https://orgmode.org/features.html][org-mode]] Language Support for Visual Studio Code via [[https://github.com/lsp-org-mode/lsp-org-mode][lsp-org-mode]].
+
+* Features
+
+** Syntax Highlighting
+
+[[file:./.github/blob/syntax-highlighting.png]]
+
+** Section Folding
+
+[[file:./.github/blob/section-folding.png]]
+
+** Code Completion
+
+[[file:./.github/blob/code-completion.png]]
+
+** Code Action
+
+*** Table Align
+
+[[file:./.github/blob/code-action-table-align.png]]
+
+[[file:./.github/blob/code-action-table-align2.png]]
+
+* Usage
+
+** User usage
+
+TODO
+
+** Developer usage
+
+*** Install lsp-org-mode
+
+#+begin_src shell
+git clone https://github.com/lsp-org-mode/lsp-org-mode.git
+cd lsp-org-mode
+ln -s "$(pwd)/bin/lsp-org-mode" ~/.local/bin/
+#+end_src
+
+Ensure that `~/.local/bin` is in your `PATH`.
+
+*** Install vscode-org-mode
+
+#+begin_src shell
+git clone https://github.com/lsp-org-mode/vscode-org-mode.git
+cd vscode-org-mode
+pnpm install
+#+end_src
+
+*** Run vscode-org-mode
+
+1. Open VSCode
+
+   #+begin_src shell
+   cd vscode-org-mode
+   code .
+   #+end_src
+
+2. Press `F5` to run child VSCode with vscode-org-mode extension.
+
+3. Open a org file.
+
+   #+begin_src shell
+   code ~/path/to/org/file
+   #+end_src
+
+4. Enjoy!
+
+   [[file:./.github/blob/vscode-debug.png]]
+
