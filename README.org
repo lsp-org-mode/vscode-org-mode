@@ -48,6 +48,7 @@ Ensure that `~/.local/bin` is in your `PATH`.
 git clone https://github.com/lsp-org-mode/vscode-org-mode.git
 cd vscode-org-mode
 pnpm install
+pnpm build
 #+end_src
 
 *** Run vscode-org-mode
@@ -70,4 +71,3 @@ pnpm install
 4. Enjoy!
 
    [[file:./.github/blob/vscode-debug.png]]
-
